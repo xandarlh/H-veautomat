@@ -9,9 +9,13 @@ namespace Hæveautomat
     public class Card
     {
         public string CardholderName { get; set; }
+
         public string Cardnumber { get; set; }
+
         public int Pincode { get; set; }
+
         public Account Account { get; set; }
+
         public string GenerateCardNumber()
         {
             Random random = new Random();
@@ -30,7 +34,7 @@ namespace Hæveautomat
                 if (Account.Withdraw(amount))
                 {
                     return $"{amount} has been succesfully withdrawed";
-                    }
+                }
                 else
                 {
                     return "Not enought money";
