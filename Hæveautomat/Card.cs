@@ -33,7 +33,7 @@ namespace Hæveautomat
             {
                 if (Account.Withdraw(amount))
                 {
-                    return $"{amount} has been succesfully withdrawed";
+                    return amount.ToString();
                 }
                 else
                 {
@@ -45,9 +45,9 @@ namespace Hæveautomat
                 return "Wrong pin";
             }
         }
-        public Card(string cardholderName, int pincode, Account account)
+        public Card(int pincode, Account account)
         {
-            this.CardholderName = cardholderName;
+            this.CardholderName = account.FirstName + " " + account.LastName;
             this.Pincode = pincode;
             this.Account = account;
         }

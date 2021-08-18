@@ -15,7 +15,7 @@ namespace Hæveautomat
 
         public void SetupAccount(int pincode)
         {
-            Card card = new Card(FirstName + " " + LastName, pincode, this);
+            Card card = new Card(pincode, this);
             card.GenerateCardNumber();
             this.Card = card;
         }
