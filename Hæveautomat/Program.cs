@@ -11,7 +11,7 @@ namespace Hæveautomat
         static void Main(string[] args)
         {
             Account account = new Account("alex", "lac");
-            account.SetupAccount(1234);
+            account.SetupCard(1234);
 
             account.AvailableAmount = 19999;
             Console.WriteLine(account.Card.Withdraw(1234,122));

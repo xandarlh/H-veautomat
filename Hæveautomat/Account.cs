@@ -13,12 +13,14 @@ namespace Hæveautomat
         public double AvailableAmount { get; set; }
         public Card Card { get; set; }
 
-        public void SetupAccount(int pincode)
+        //Run this method to set up a new card for the account.
+        public void SetupCard(int pincode)
         {
             Card card = new Card(pincode, this);
             card.GenerateCardNumber();
             this.Card = card;
         }
+        //Is is possible to withdraw(enough money?)
         public bool Withdraw(double amount)
         {
             if (amount < AvailableAmount)

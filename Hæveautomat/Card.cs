@@ -16,6 +16,7 @@ namespace Hæveautomat
 
         public Account Account { get; set; }
 
+        //Generates a random card number for the card(16 digits long)
         public string GenerateCardNumber()
         {
             Random random = new Random();
@@ -27,6 +28,7 @@ namespace Hæveautomat
             }
             return cardnumber;
         }
+        
         public string Withdraw(int pincode, double amount)
         {
             if (pincode == Pincode)

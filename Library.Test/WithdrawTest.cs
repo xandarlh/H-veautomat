@@ -10,6 +10,7 @@ namespace Library.Test
 {
     public class WithdrawTest
     {
+        //Test for what the returning amount of money is.
         [Fact]
         public void Withdraw_ShouldReturnAmount()
         {
@@ -23,7 +24,7 @@ namespace Library.Test
             //Assert
             Assert.Equal(expected, actual);
         }
-
+        //Test to see if the money gets removed when you withdraw.
         [Fact]
         public void Withdraw_ShouldRemoveFromAvailableAmount()
         {
